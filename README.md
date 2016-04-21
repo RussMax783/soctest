@@ -16,4 +16,7 @@ I chose to just implement as a REST API. I didn't create templates or anything b
 If the file was very large, we could stream the file. Or we could even put restrictions on file size. but beacuase we wouldn't want to store the actual file, streaming it through would probably be the best option.
 
 
-If my understanding is correct, the python csv module handles different types of encodings so we would really need to worry about that. If the file is encoded in a way that csv couldn't read the file, then we proably wouldn't want to read that file in the first place and have the user change it.
+If my understanding is correct, the python csv module handles different types of encodings so we wouldn't really need to worry about that. If the file is encoded in a way that csv couldn't read the file, then we proably wouldn't want to read that file in the first place and have the user change it.
+
+
+#### NOTE: As i was reflecting on what i did i realized i missed a couple things because i went kind of fast. but the csv contained what each csv value was on the first line, so i should have extracted that and made sure the info lined up with what i was going to store. The concept for saving would be the same but should just have more validation on it. 
